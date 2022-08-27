@@ -1,0 +1,383 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#title {
+  position: absolute;
+  font-size: 2em;
+  left: 4%;
+  top: 1%;
+}
+
+#title {
+  position: absolute;
+  font-size: 2em;
+  left: 4%;
+  top: 1%;
+}
+
+#logIn {
+  position: absolute;
+  font-size: 2em;
+  right: 12%;
+  top: 1%;
+  cursor: pointer;
+}
+
+#myPosts {
+  position: absolute;
+  font-size: 2em;
+  right: 60%;
+  top: 1%;
+  cursor: pointer;
+}
+
+#signIn {
+  position: absolute;
+  font-size: 2em;
+  right: 4%;
+  top: 1%;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  /* width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: #eee;
+  /* padding: 0 1.5rem; */
+}
+
+.blogPost {
+  width: 100%;
+  max-width: 80rem;
+  max-height: 20rem;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.singlePost {
+  width: 100%;
+  max-width: 80rem;
+  max-height: 50rem;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  align-items: center;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.singleComment {
+  width: 100%;
+  margin-top: 2rem;
+  min-width: 80rem;
+  /* max-width: 88rem; */
+  max-height: 50rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  align-items: center;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+.blogPostImg {
+  min-width: 30rem;
+  max-width: 30rem;
+  height: 20rem;
+  transform: translateX(-8rem);
+  position: relative;
+}
+
+.singlePostImg {
+  max-width: 50%;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+.blogPostImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+}
+
+.singlePostImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+}
+
+.blogPostImg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0.5);
+  border-radius: 0.8rem;
+}
+
+.blogPostDate span {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.blogPostTitle {
+  font-size: 2.5rem;
+  margin: 1.5rem 0 2rem;
+  text-transform: uppercase;
+}
+
+.blogPostText {
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.singleCommentText {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.blogPostRm {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: white;
+  background-color: black;
+  border-radius: 0.8rem;
+  text-decoration: none;
+}
+.blogPostComment {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: white;
+  background-color: black;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.blogPostRm:hover {
+  font-weight: bold;
+}
+
+.mainBlog {
+  margin: auto;
+  margin-top: 8%;
+  width: 55%;
+  padding: 10px;
+}
+
+.allCommentSection {
+  margin: auto;
+  width: 55%;
+}
+
+.loginSection {
+  margin: auto;
+  margin-top: 8%;
+  width: 25%;
+  padding: 10px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.commentSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  padding-bottom: 3em;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+  background-color: white;
+}
+/* @media screen and (max-width: 1068px) {
+  .blogPost {
+    padding: 80rem;
+  }
+
+  .blogPostImg {
+    min-width: 30rem;
+    max-width: 30rem;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .blogPost {
+    max-width: 70rem;
+  }
+}
+
+@media screen and (max-width: 768) {
+  .blogPost {
+    padding: 2.5rem;
+    flex-direction: column;
+  }
+
+  .blogPostImg {
+    min-width: 100%;
+    max-width: 100%;
+    transform: translate(0, -8rem);
+  }
+} */
+
+center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+.center h1 {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+.center form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: 0.5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+.pass {
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.pass:hover {
+  text-decoration: underline;
+}
+input[type="submit"] {
+  width: 25%;
+  margin-left: 35%;
+  height: 50px;
+  border: 1px solid;
+  background: black;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover {
+  transition: 0.5s;
+}
+.signup_link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a {
+  color: #2691d9;
+  text-decoration: none;
+}
+.signup_link a:hover {
+  text-decoration: underline;
+}
+
+.commentOnPost {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 25px;
+}
+
+.ex {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 5%;
+  text-align: right;
+  font-size: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 5em;
+}
