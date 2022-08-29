@@ -1,13 +1,13 @@
-const writeComment = $(".blogPostComment");
+// const writeComment = $(".blogPostComment");
 
-$(".commentSection").hide();
+// $(".commentSection").hide();
 
-writeComment.click(() => {
-  $(".singlePost").css("filter", "blur(2px)");
-  $(".commentSection").show();
-});
+// writeComment.click(() => {
+//   $(".singlePost").css("filter", "blur(2px)");
+//   $(".commentSection").show();
+// });
 
-$(".ex").click(() => {
-  $(".commentSection").hide();
-  $(".singlePost").css("filter", "");
-});
+// $(".ex").click(() => {
+//   $(".commentSection").hide();
+//   $(".singlePost").css("filter", "");
+// });
