@@ -1,23 +1,26 @@
 const router = require("express").Router();
-const { Post, User } = require("../../models");
+const { Post, User, Comment } = require("../../models");
 
-// get all users
 router.get("/", (req, res) => {
   Post.findAll({
-    attributes: ["id", "post_url", "title", "created_at"],
     order: [["created_at", "DESC"]],
+    attributes: ["id", "post_text", "img_url", "title", "created_at"],
     include: [
+      // include the Comment model here:
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
       {
         model: User,
         attributes: ["username"],
       },
     ],
-  })
-    .then((dbPostData) => res.json(dbPostData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  });
 });
 
 router.get("/:id", (req, res) => {
@@ -25,7 +28,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "post_url", "title", "created_at"],
+    attributes: ["id", "post_text", "img_url", "title", "created_at"],
     include: [
       {
         model: User,
@@ -49,7 +52,8 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   Post.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    post_text: req.body.post_text,
+    img_url: req.body.img_url,
     user_id: req.body.user_id,
   })
     .then((dbPostData) => {
