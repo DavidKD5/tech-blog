@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
         include: {
           model: User,
           attributes: ["username"],
@@ -19,7 +19,12 @@ router.get("/", (req, res) => {
         attributes: ["username"],
       },
     ],
-  });
+  })
+    .then((dbUserData) => res.json(dbUserData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 router.get("/:id", (req, res) => {

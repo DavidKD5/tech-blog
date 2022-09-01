@@ -66,7 +66,7 @@ body {
 .blogPost {
   width: 100%;
   max-width: 80rem;
-  max-height: 16rem;
+  max-height: 20rem;
   padding: 5rem;
   background-color: #fff;
   box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
@@ -146,13 +146,13 @@ body {
 .blogPostDate span {
   display: block;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin: 0.5rem 0;
 }
 
 .blogPostTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 1.5rem 0 2rem;
   text-transform: uppercase;
 }
@@ -163,12 +163,6 @@ body {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.blogPostSign {
-  margin-bottom: 3rem;
-  font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.7);
-}
-
 .singleCommentText {
   font-size: 1.4rem;
   color: rgba(0, 0, 0, 0.7);
@@ -176,9 +170,10 @@ body {
 
 .blogPostRm {
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 3rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
   background-color: black;
   border-radius: 0.8rem;
