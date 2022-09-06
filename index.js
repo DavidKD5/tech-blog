@@ -11,3 +11,10 @@
 //   $(".commentSection").hide();
 //   $(".singlePost").css("filter", "");
 // });
+
+const loginForm = $(".loginForm");
+const signupForm = $(".signupForm");
+
+signupForm.submit(() => {
+  alert("submitted");
+});

@@ -1,18 +1,20 @@
-{{#each posts as |post|}}
-  <div class="blogPost">
-    <div class="blogPostImg">
-      <img src="{{img_url}}" alt="" />
-    </div>
-    <div class="blogPostInfo">
-      <div class="blogPostDate">
-        <span>{{created_at}}</span>
+<section class="mainBlog">
+  {{#each posts as |post|}}
+    <div class="blogPost">
+      <div class="blogPostImg">
+        <img src="{{img_url}}" alt="" />
       </div>
-      <h1 class="blogPostTitle">{{title}}</h1>
-      <p class="blogPostText">
-        {{post_text}}
-      </p>
-      <p class="blogPostSign">Created by: {{user.username}}</p>
-      <a href="/post/{{id}}" class="blogPostRm">Comment</a>
+      <div class="blogPostInfo">
+        <div class="blogPostDate">
+          <span>{{created_at}}</span>
+        </div>
+        <h1 class="blogPostTitle">{{title}}</h1>
+        <p class="blogPostText">
+          {{post_text}}
+        </p>
+        <p class="blogPostSign">Created by: {{user.username}}</p>
+        <a href="/post/{{id}}" class="blogPostRm">Comment</a>
+      </div>
     </div>
-  </div>
-{{/each}}
+  {{/each}}
+</section>

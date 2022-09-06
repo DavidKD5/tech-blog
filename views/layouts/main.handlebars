@@ -8,14 +8,19 @@
   </head>
   <body>
     <nav>
-      <h1 id="title">FIN*TECH</h1>
+      <h1 id="title"><a href="/">FIN*TECH</a></h1>
       <h1 id="myPosts"><a href="">MY POSTS</a></h1>
-      <h1 id="logIn"><a href="">LOG-IN</a></h1>
-      <h1 id="signIn"><a href="">SIGN-UP</a></h1>
+      <button id="logout" class="btn-no-style">logout</button>
+
+      <h1 id="logIn"><a href="/login">LOG-IN</a></h1>
+      <h1 id="signIn"><a href="/signup">SIGN-UP</a></h1>
     </nav>
 
-    <section class="mainBlog">
-      {{{body}}}
-    </section>
+    {{{body}}}
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script src="/logout.js"></script>
   </body>
 </html>
