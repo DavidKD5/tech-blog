@@ -33,6 +33,22 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/post/:id", (req, res) => {
+  const post = {
+    id: 1,
+    img_url: "https://handlebarsjs.com/guide/",
+    post_text: "aj;ldjsfl adjsfllakdjsf asjfla;kdjsf",
+    title: "Handlebars asdfa Docs",
+    created_at: new Date(),
+    comments: [{}, {}],
+    user: {
+      username: "test_user",
+    },
+  };
+
+  res.render("single-post", { post });
+});
+
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");

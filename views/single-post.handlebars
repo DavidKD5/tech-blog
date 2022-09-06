@@ -1,0 +1,18 @@
+<section class="mainBlog">
+  <div class="singlePost">
+    <div class="singlePostImg">
+      <img src="{{post.img_url}}" alt="" />
+    </div>
+    <div class="blogPostInfo">
+      <div class="blogPostDate">
+        <span>{{post.created_at}}</span>
+      </div>
+      <h1 class="blogPostTitle">{{post.title}}</h1>
+      <p class="blogPostText">
+        {{post_text}}
+      </p>
+      <p class="blogPostSign">Created by: {{post.user.username}}</p>
+      <button class="blogPostComment">Write Comment</button>
+    </div>
+  </div>
+</section>
